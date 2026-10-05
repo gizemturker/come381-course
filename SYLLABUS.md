@@ -33,7 +33,7 @@ Haftada 2 saat ders ve 2 saat laboratuvar, 14 hafta. Laboratuvar dersin devamı 
 | Ödevler | %20 | 6 ödevin ortalaması. En düşük not atılır, kalan 5 ödevin ortalaması alınır |
 | Final | %50 | Capstone teslimi (%35, Hafta 14) ve savunma, 10 dakika (%15) |
 
-Yazılı sınav yok: inşa edersin, sonra savunursun. Hafta 1 ödevi notsuzdur, 6 notlu ödev Hafta 2'den başlar. Capstone önerisi ve ara kontrol de ödevler arasında yer alır. Ödev konuları ve rubrikler, her ödevle birlikte repoya eklenir.
+Yazılı sınav yok: inşa edersin, sonra savunursun. Ödevler Hafta 4'te başlar. Capstone önerisi ve ara kontrol de ödevler arasında yer alır. Ödev konuları ve rubrikler, her ödevle birlikte repoya eklenir.
 
 ## Kurallar
 

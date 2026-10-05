@@ -1,6 +1,6 @@
 # Hafta 2: Kavramsal modelleme: ER modeli
 
-Durum: Yakında
+Durum: Yayında
 
 ## Bu hafta ne işliyoruz
 
@@ -40,7 +40,3 @@ ER modelleme bölümü (Elmasri & Navathe veya Silberschatz).
 ## Kilometre taşı
 
 Senaryo önerisi (GitHub Issue)
-
-## Ödev
-
-Bu haftanın ödevi ayrıca eklenecek.

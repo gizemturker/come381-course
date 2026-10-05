@@ -22,8 +22,8 @@ Bu depo dersin ortak kaynak deposudur: ders amacı, haftalık konular, kaynak ki
 | Hafta | Konu | Kilometre taşı | Durum |
 |---|---|---|---|
 | 1 | [Neden veritabanı? Dosyadan sisteme](weeks/week-01/README.md) | GitHub kullanıcı adı, kayıt formu, ilk repo | Yayında |
-| 2 | [Kavramsal modelleme: ER modeli](weeks/week-02/README.md) | Senaryo önerisi (GitHub Issue) | Yakında |
-| 3 | [Genişletilmiş ER (EER)](weeks/week-03/README.md) | Senaryo onayı | Yakında |
+| 2 | [Kavramsal modelleme: ER modeli](weeks/week-02/README.md) | Senaryo önerisi (GitHub Issue) | Yayında |
+| 3 | [Genişletilmiş ER (EER)](weeks/week-03/README.md) | Senaryo onayı | Yayında |
 | 4 | [ER/EER'den ilişkisel şemaya](weeks/week-04/README.md) | Taslak şema (Pull Request) | Yakında |
 | 5 | [İlişkisel model, bütünlük kısıtları, ilişkisel cebir](weeks/week-05/README.md) | Haftalık lab teslimi | Yakında |
 | 6 | [SQL I](weeks/week-06/README.md) | Haftalık lab teslimi | Yakında |

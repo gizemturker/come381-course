@@ -38,4 +38,4 @@ Taslak şema (Pull Request)
 
 ## Ödev
 
-Bu haftanın ödevi ayrıca eklenecek.
+Ödev 1: yönergesi ders günü bu klasöre eklenir.

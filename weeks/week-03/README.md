@@ -1,6 +1,6 @@
 # Hafta 3: Genişletilmiş ER (EER)
 
-Durum: Yakında
+Durum: Yayında
 
 ## Bu hafta ne işliyoruz
 
@@ -32,10 +32,7 @@ EER bölümü.
 ## Ek kaynaklar
 
 - Haftanın kaynakları ders sırasında paylaşılır.
+
 ## Kilometre taşı
 
 Senaryo onayı
-
-## Ödev
-
-Bu haftanın ödevi ayrıca eklenecek.
