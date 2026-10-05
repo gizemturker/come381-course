@@ -30,11 +30,11 @@ Bu depo dersin ortak kaynak deposudur: ders amacı, haftalık konular, kaynak ki
 | 7 | [SQL II](weeks/week-07/README.md) | Kısa sınav (GitHub tabanlı) | Yakında |
 | 8 | [Fonksiyonel bağımlılık ve normalleştirme](weeks/week-08/README.md) | Vize ödevi teslimi | Yakında |
 | 9 | [Vize savunmaları ve tekrar](weeks/week-09/README.md) | Savunma notu | Yakında |
-| 10 | [Gelişmiş SQL](weeks/week-10/README.md) | Capstone önerisi (GitHub Issue) | Yakında |
-| 11 | [Fiziksel tasarım ve sorgu eniyileştirme](weeks/week-11/README.md) | Haftalık lab teslimi | Yakında |
-| 12 | [İşlemler ve eşzamanlılık](weeks/week-12/README.md) | Capstone ara kontrol (Pull Request incelemesi) | Yakında |
-| 13 | [Kurtarma, yedekleme ve güvenlik](weeks/week-13/README.md) | Haftalık lab teslimi | Yakında |
-| 14 | [Modern veri sistemleri](weeks/week-14/README.md) | Capstone teslimi | Yakında |
+| 10 | [Gelişmiş SQL ve indekse giriş](weeks/week-10/README.md) | Capstone önerisi (GitHub Issue) | Yakında |
+| 11 | [İşlem işleme: ACID, çizelge ve serileştirilebilirlik](weeks/week-11/README.md) | Haftalık lab teslimi | Yakında |
+| 12 | [Eşzamanlılık denetimi](weeks/week-12/README.md) | Capstone ara kontrol (Pull Request incelemesi) | Yakında |
+| 13 | [Veritabanı kurtarma](weeks/week-13/README.md) | Haftalık lab teslimi | Yakında |
+| 14 | [Veritabanı güvenliği ve proje sunumları](weeks/week-14/README.md) | Capstone teslimi | Yakında |
 
 Final haftası: capstone savunmaları (bireysel, 10 dakika).
 

@@ -5,7 +5,7 @@ Durum: Yakında
 ## Bu hafta ne işliyoruz
 
 - Alt sorgular (subquery), küme işlemleri
-- `INSERT`, `UPDATE`, `DELETE`
+- `INSERT`, `UPDATE`, `DELETE` ve kısıt ihlali durumları
 - `NULL` mantığı
 - CTE ve pencere fonksiyonlarına giriş (window functions)
 

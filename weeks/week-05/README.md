@@ -6,6 +6,7 @@ Durum: Yakında
 
 - İlişkisel model ve bütünlük kısıtları (integrity constraints)
 - `NOT NULL`, `UNIQUE`, `CHECK`, `FOREIGN KEY` ve `ON DELETE` davranışları
+- Güncelleme işlemleri (`INSERT`, `DELETE`, `UPDATE`) ve kısıt ihlali: işlem reddedilir, `CASCADE` veya `SET NULL` uygulanır
 - İlişkisel cebir (relational algebra) ve ilişkisel hesap (relational calculus)
 
 ## Hafta sonunda yapabileceklerin

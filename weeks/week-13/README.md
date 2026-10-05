@@ -1,37 +1,44 @@
-# Hafta 13: Kurtarma, yedekleme ve güvenlik
+# Hafta 13: Veritabanı kurtarma
 
 Durum: Yakında
 
 ## Bu hafta ne işliyoruz
 
-- WAL ve checkpoint
+- Hata türleri: işlem hatası, sistem çökmesi, disk hatası
+- Günlük (log) tabanlı kurtarma: undo, redo, checkpoint
+- Önceden yazma günlüğü (WAL)
+- ARIES kurtarma algoritmasına giriş
+- Gölge sayfalama (shadow paging)
 - Yedekleme ve geri yükleme (`pg_dump`, `pg_restore`)
-- Roller ve yetkiler (`GRANT`, `REVOKE`)
-- SQL injection
 
 ## Hafta sonunda yapabileceklerin
 
+- Bir çökme sonrası hangi işlemin undo, hangisinin redo edileceğini günlükten çıkarabilirsin
 - Yedekten geri dönüş senaryosunu uygulayabilirsin
-- Rol bazlı yetki tasarlayıp SQL injection riskini test edebilirsin
+- WAL ile checkpoint'in rolünü anlatabilirsin
 
 ## Anahtar terimler
 
 | English | Türkçe |
 |---|---|
 | write-ahead log (WAL) | önceden yazma günlüğü |
-| SQL injection | SQL enjeksiyonu |
+| checkpoint | kontrol noktası |
+| undo / redo | geri alma / yeniden yapma |
+| shadow paging | gölge sayfalama |
+| backup / restore | yedekleme / geri yükleme |
 
 ## Laboratuvar
 
-`pg_dump`/`pg_restore` tatbikatı, roller, SQL injection testi.
+`pg_dump`/`pg_restore` tatbikatı: veritabanını yedekle, boz, geri yükle, süreyi ve adımları belgele.
 
 ## Okuma
 
-Kurtarma ve güvenlik bölümleri.
+Veritabanı kurtarma protokolleri bölümü.
 
 ## Ek kaynaklar
 
 - PostgreSQL Backup and Restore: https://www.postgresql.org/docs/current/backup.html
+- PostgreSQL WAL: https://www.postgresql.org/docs/current/wal-intro.html
 
 ## Kilometre taşı
 

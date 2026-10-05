@@ -2,8 +2,14 @@
 
 ## Ders kitapları
 
-- R. Elmasri, S. B. Navathe, *Fundamentals of Database Systems* (güncel baskıyı yayıncı sitesinden teyit et)
-- A. Silberschatz, H. F. Korth, S. Sudarshan, *Database System Concepts* (güncel baskıyı teyit et)
+- R. Elmasri & S. B. Navathe, *Fundamentals of Database Systems*, 6th Edition, Pearson (daha yeni baskı varsa onu da kullanabilirsin)
+- A. Silberschatz, H. F. Korth & S. Sudarshan, *Database System Concepts*, 5th Edition, McGraw-Hill (daha yeni baskı varsa onu da kullanabilirsin)
+
+## Resmi ders kaynakları (isteğe bağlı okuma)
+
+- Connolly, Begg & Thomas, *Database Systems: A Practical Approach to Design, Implementation and Management*, 3rd Ed., Addison Wesley, 2002
+- Kroenke, D. M., *Database Processing: Fundamentals, Design & Implementation*, 8th Ed., Prentice Hall, 2000
+- Date, C. J., *An Introduction to Database Systems*, 6th Ed., Addison Wesley, 1998
 
 ## Tamamlayıcı kitaplar
 

@@ -15,8 +15,8 @@ Bu dersi tamamlayan öğrenci:
 5. İlişkisel cebir ifadelerini SQL'e çevirir.
 6. PostgreSQL'de DDL, DML, birleştirme, alt sorgu, CTE, pencere fonksiyonu, view ve trigger yazar.
 7. İndeks tasarlar, `EXPLAIN ANALYZE` ile sorgu planlarını okur, iyileştirmeyi ölçer.
-8. Transaction, ACID ve izolasyon seviyelerini iki eşzamanlı oturumda gösterir, anomalileri yorumlar.
-9. Yedekleme ve geri yükleme senaryosu uygular, WAL tabanlı kurtarma mantığını açıklar.
+8. Transaction, ACID, çizelge ve serileştirilebilirlik kavramlarını açıklar; kilitleme ve zaman damgası protokollerini karşılaştırır; izolasyon seviyelerini iki eşzamanlı oturumda gösterir, anomalileri yorumlar.
+9. Yedekleme ve geri yükleme senaryosu uygular, günlük (log) tabanlı kurtarma mantığını (undo, redo, checkpoint, ARIES) açıklar.
 10. Rol ve yetki tasarlar, SQL injection risklerini test eder ve önlemlerini uygular.
 11. Yapay zekanın ürettiği SQL ve şema çıktılarını doğrular, hatalarını bulur ve belgeler.
 12. Git/GitHub ile sürüm kontrollü, tekrar üretilebilir bir veritabanı projesi yönetir.

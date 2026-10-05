@@ -1,36 +1,42 @@
-# Hafta 14: Modern veri sistemleri
+# Hafta 14: Veritabanı güvenliği ve proje sunumları
 
 Durum: Yakında
 
 ## Bu hafta ne işliyoruz
 
-- JSONB ve doküman verisi
-- NoSQL türleri
-- Vektör veritabanları ve pgvector
-- Dağıtık ve nesne yönelimli sistemlere genel bakış
+- Güvenlik tehditleri ve erişim denetimi
+- Rol ve yetki tasarımı (`GRANT`, `REVOKE`), en az yetki ilkesi
+- SQL injection ve parametreli sorgularla korunma
+- Proje sunumları (capstone demoları)
+- İsteğe bağlı genel bakış: JSONB, NoSQL, vektör veritabanları (pgvector), dağıtık ve nesne yönelimli sistemler
 
 ## Hafta sonunda yapabileceklerin
 
-- Hangi veri için ilişkisel, hangisi için doküman veya vektör yaklaşımı uygun olduğunu gerekçelendirebilirsin
+- Rol bazlı yetki tasarlayabilirsin
+- SQL injection riskini test edip parametreli sorguyla önleyebilirsin
+- Kendi veritabanı projeni sunabilirsin
 
 ## Anahtar terimler
 
 | English | Türkçe |
 |---|---|
-| embedding / vector | gömme / vektör |
-| document store | doküman veritabanı |
+| access control | erişim denetimi |
+| least privilege | en az yetki |
+| SQL injection | SQL enjeksiyonu |
+| role | rol |
 
 ## Laboratuvar
 
-Capstone demoları.
+Rol oluşturma, `GRANT`/`REVOKE`, SQL injection testi. Capstone demoları.
 
 ## Okuma
 
-Modern veri sistemleri bölümü.
+Veritabanı güvenliği bölümü.
 
 ## Ek kaynaklar
 
-- pgvector: https://github.com/pgvector/pgvector
+- PostgreSQL Privileges: https://www.postgresql.org/docs/current/ddl-priv.html
+- Modern veri sistemleri (isteğe bağlı): pgvector https://github.com/pgvector/pgvector
 
 ## Kilometre taşı
 
