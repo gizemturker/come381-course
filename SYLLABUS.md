@@ -27,21 +27,19 @@ Haftada 2 saat ders ve 2 saat laboratuvar, 14 hafta. Laboratuvar dersin devamı 
 
 ## Değerlendirme
 
-| Bileşen | Ağırlık |
-|---|---|
-| Vize tasarım dosyası (Hafta 8) | %25 |
-| Vize savunması, 7 dakika (Hafta 9) | %10 |
-| GitHub üzerinden kısa sınav (Hafta 7) | %5 |
-| Capstone önerisi ve ara kontrol (Hafta 10-12) | %10 |
-| Capstone teslimi (Hafta 14) | %35 |
-| Final savunması, 10 dakika | %15 |
+| Bileşen | Ağırlık | Ayrıntı |
+|---|---|---|
+| Vize | %30 | Veritabanı tasarım dosyası (%20, Hafta 8) ve savunma, 7 dakika (%10, Hafta 9) |
+| Ödevler | %20 | 6 ödevin ortalaması. En düşük not atılır, kalan 5 ödevin ortalaması alınır |
+| Final | %50 | Capstone teslimi (%35, Hafta 14) ve savunma, 10 dakika (%15) |
 
-Yazılı sınav yok: inşa edersin, sonra savunursun. Ayrıntılı rubrikler ödev yönergeleriyle birlikte paylaşılır.
+Yazılı sınav yok: inşa edersin, sonra savunursun. Hafta 1 ödevi notsuzdur, 6 notlu ödev Hafta 2'den başlar. Capstone önerisi ve ara kontrol de ödevler arasında yer alır. Ödev konuları ve rubrikler, her ödevle birlikte repoya eklenir.
 
 ## Kurallar
 
 - Çalışmalar bireyseldir.
 - Teslim zamanı, `main` dalındaki son commit'in zaman damgasıdır.
+- Vize teslimi, GitHub repoya ek olarak 1 sayfalık imzalı bir raporla tamamlanır. Rapor, savunma günü elden teslim edilir ve repodaki son commit'in kodunu (hash) taşır.
 - İşi dönem boyunca küçük ve anlamlı commit'lerle ilerlet. Tek dev commit ile gelen teslimde puan kırılır.
 - Şifre, API anahtarı ve token hiçbir zaman repoya girmez.
 - Geç teslim: her gün için puanın %10'u düşer, 3 günden sonra kabul edilmez.
@@ -57,4 +55,9 @@ Yapay zeka araçları serbesttir ve teşvik edilir. Sen onun denetçisisin:
 
 ## İletişim
 
-Ofis saatleri ve e-posta: [bu alan doldurulacak]
+- E-posta: gturker@dogus.edu.tr
+- Danışmanlık saatleri (Dudullu Kampüsü):
+  - Salı 13:00-15:00
+  - Cuma 12:00-14:00
+
+Kurulum sorunu, ödev takılması ya da ders içeriğiyle ilgili sorular için danışmanlık saatlerine gelebilirsin. E-postada konu satırına "COME 381" yaz ve GitHub kullanıcı adını ekle.
