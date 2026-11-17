@@ -1,0 +1,148 @@
+TRUNCATE TABLE
+INSERT 0 2
+INSERT 0 3
+INSERT 0 2
+INSERT 0 1
+psql:week-05/violations.sql:23: ERROR:  23502: null value in column "name" of relation "category" violates not-null constraint
+AYRINTI:  Failing row contains (3, null).
+ÞEMA ADI:  public
+TABLO ADI:  category
+SÜTUN ADI:  name
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:27: ERROR:  23502: null value in column "full_name" of relation "member" violates not-null constraint
+AYRINTI:  Failing row contains (4, null, null-name@example.com, Istanbul, active).
+ÞEMA ADI:  public
+TABLO ADI:  member
+SÜTUN ADI:  full_name
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:31: ERROR:  23502: null value in column "email" of relation "member" violates not-null constraint
+AYRINTI:  Failing row contains (5, Null Email, null, Istanbul, active).
+ÞEMA ADI:  public
+TABLO ADI:  member
+SÜTUN ADI:  email
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:35: ERROR:  23502: null value in column "status" of relation "member" violates not-null constraint
+AYRINTI:  Failing row contains (6, Null Status, null-status@example.com, Istanbul, null).
+ÞEMA ADI:  public
+TABLO ADI:  member
+SÜTUN ADI:  status
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:39: ERROR:  23502: null value in column "category_id" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (3, null, No Category, 2026-12-01, 2026-12-01, 10).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  category_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:43: ERROR:  23502: null value in column "title" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (4, 1, null, 2026-12-01, 2026-12-01, 10).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  title
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:47: ERROR:  23502: null value in column "start_date" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (5, 1, No Start Date, null, 2026-12-01, 10).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  start_date
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:51: ERROR:  23502: null value in column "end_date" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (6, 1, No End Date, 2026-12-01, null, 10).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  end_date
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:55: ERROR:  23502: null value in column "capacity" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (7, 1, No Capacity, 2026-12-01, 2026-12-01, null).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  capacity
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:59: ERROR:  23502: null value in column "member_id" of relation "event_registration" violates not-null constraint
+AYRINTI:  Failing row contains (2, null, 1, 2026-11-17 11:00:00, 4).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+SÜTUN ADI:  member_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:63: ERROR:  23502: null value in column "event_id" of relation "event_registration" violates not-null constraint
+AYRINTI:  Failing row contains (3, 2, null, 2026-11-17 11:05:00, 4).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+SÜTUN ADI:  event_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:67: ERROR:  23502: null value in column "registered_at" of relation "event_registration" violates not-null constraint
+AYRINTI:  Failing row contains (4, 2, 1, null, 4).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+SÜTUN ADI:  registered_at
+YER:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:71: ERROR:  23505: duplicate key value violates unique constraint "uq_member_email"
+AYRINTI:  Key (email)=(ada@example.com) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  member
+KISITLAMA ADI:  uq_member_email
+YER:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:74: ERROR:  23505: duplicate key value violates unique constraint "uq_category_name"
+AYRINTI:  Key (name)=(Sports) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  category
+KISITLAMA ADI:  uq_category_name
+YER:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:78: ERROR:  23505: duplicate key value violates unique constraint "uq_registration_member_event"
+AYRINTI:  Key (member_id, event_id)=(1, 1) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  uq_registration_member_event
+YER:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:82: ERROR:  23514: new row for relation "event" violates check constraint "chk_event_capacity_positive"
+AYRINTI:  Failing row contains (8, 1, Zero Capacity, 2026-12-02, 2026-12-02, 0).
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  chk_event_capacity_positive
+YER:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:86: ERROR:  23514: new row for relation "member" violates check constraint "chk_member_status"
+AYRINTI:  Failing row contains (8, Wrong Status, wrong-status@example.com, Istanbul, pending).
+ÞEMA ADI:  public
+TABLO ADI:  member
+KISITLAMA ADI:  chk_member_status
+YER:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:90: ERROR:  23514: new row for relation "event" violates check constraint "chk_event_date_order"
+AYRINTI:  Failing row contains (9, 1, Backwards Event, 2026-12-10, 2026-12-09, 10).
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  chk_event_date_order
+YER:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:94: ERROR:  23514: new row for relation "event_registration" violates check constraint "chk_registration_rating"
+AYRINTI:  Failing row contains (6, 2, 1, 2026-11-17 12:10:00, 6).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  chk_registration_rating
+YER:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:98: ERROR:  23503: insert or update on table "event" violates foreign key constraint "fk_event_category"
+AYRINTI:  Key (category_id)=(999) is not present in table "category".
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  fk_event_category
+YER:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:102: ERROR:  23503: insert or update on table "event_registration" violates foreign key constraint "fk_registration_member"
+AYRINTI:  Key (member_id)=(999) is not present in table "member".
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  fk_registration_member
+YER:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:106: ERROR:  23503: insert or update on table "event_registration" violates foreign key constraint "fk_registration_event"
+AYRINTI:  Key (event_id)=(999) is not present in table "event".
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  fk_registration_event
+YER:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:109: ERROR:  23503: update or delete on table "category" violates foreign key constraint "fk_event_category" on table "event"
+AYRINTI:  Key (category_id)=(1) is still referenced from table "event".
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  fk_event_category
+YER:  ri_ReportViolation, ri_triggers.c:2811
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
