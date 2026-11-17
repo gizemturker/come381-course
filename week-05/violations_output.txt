@@ -1,0 +1,141 @@
+TRUNCATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 3
+INSERT 0 1
+INSERT 0 1
+psql:week-05/violations.sql:35: ERROR:  23502: null value in column "full_name" of relation "student" violates not-null constraint
+DETAIL:  Failing row contains (4, null, isimsiz@ogrenci.edu.tr, Ankara, standard, 2026-11-10).
+SCHEMA NAME:  public
+TABLE NAME:  student
+COLUMN NAME:  full_name
+LOCATION:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:39: ERROR:  23502: null value in column "title" of relation "workshop" violates not-null constraint
+DETAIL:  Failing row contains (2, null, painting, 1, 1, 2026-06-01, 2026-06-10, 15, 1200.00).
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+COLUMN NAME:  title
+LOCATION:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:47: ERROR:  23505: duplicate key value violates unique constraint "uq_instructor_email"
+DETAIL:  Key (email)=(derin.aksoy@sanatmerkezi.org) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  instructor
+CONSTRAINT NAME:  uq_instructor_email
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:51: ERROR:  23505: duplicate key value violates unique constraint "uq_room_name"
+DETAIL:  Key (room_name)=(Atolye A1 - Seramik) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  room
+CONSTRAINT NAME:  uq_room_name
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:55: ERROR:  23505: duplicate key value violates unique constraint "uq_student_email"
+DETAIL:  Key (email)=(ayse.kaya@ogrenci.edu.tr) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  student
+CONSTRAINT NAME:  uq_student_email
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:59: ERROR:  23505: duplicate key value violates unique constraint "uq_enrollment_student_workshop"
+DETAIL:  Key (student_id, workshop_id)=(1, 1) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  uq_enrollment_student_workshop
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:67: ERROR:  23514: new row for relation "instructor" violates check constraint "chk_instructor_hourly_rate_positive"
+DETAIL:  Failing row contains (3, Caner Yildiz, caner@sanatmerkezi.org, music, Istanbul, 0.00, 2026-11-10).
+SCHEMA NAME:  public
+TABLE NAME:  instructor
+CONSTRAINT NAME:  chk_instructor_hourly_rate_positive
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:71: ERROR:  23514: new row for relation "room" violates check constraint "chk_room_capacity_positive"
+DETAIL:  Failing row contains (3, Bozuk Salon, 0, -5).
+SCHEMA NAME:  public
+TABLE NAME:  room
+CONSTRAINT NAME:  chk_room_capacity_positive
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:75: ERROR:  23514: new row for relation "student" violates check constraint "chk_student_membership"
+DETAIL:  Failing row contains (6, Selim Arslan, selim.arslan@ogrenci.edu.tr, Istanbul, platinum, 2026-11-10).
+SCHEMA NAME:  public
+TABLE NAME:  student
+CONSTRAINT NAME:  chk_student_membership
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:79: ERROR:  23514: new row for relation "workshop" violates check constraint "chk_workshop_quota_positive"
+DETAIL:  Failing row contains (3, Kontenjansiz Atolye, painting, 1, 1, 2026-06-01, 2026-06-05, 0, 800.00).
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  chk_workshop_quota_positive
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:83: ERROR:  23514: new row for relation "workshop" violates check constraint "chk_workshop_fee_nonnegative"
+DETAIL:  Failing row contains (4, Eksi Ucretli Atolye, painting, 1, 1, 2026-06-01, 2026-06-05, 10, -250.00).
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  chk_workshop_fee_nonnegative
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:87: ERROR:  23514: new row for relation "workshop" violates check constraint "chk_workshop_category"
+DETAIL:  Failing row contains (5, Gastronomi Atolyesi, cooking, 1, 1, 2026-06-01, 2026-06-05, 10, 900.00).
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  chk_workshop_category
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:91: ERROR:  23514: new row for relation "workshop" violates check constraint "chk_workshop_date_order"
+DETAIL:  Failing row contains (6, Ters Tarihli Atolye, photography, 1, 1, 2026-07-20, 2026-07-10, 10, 1100.00).
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  chk_workshop_date_order
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:95: ERROR:  23514: new row for relation "enrollment" violates check constraint "chk_enrollment_status"
+DETAIL:  Failing row contains (3, 2, 1, 2026-11-10, pending_approval, 1500.00, null).
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  chk_enrollment_status
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:99: ERROR:  23514: new row for relation "enrollment" violates check constraint "chk_enrollment_paid_nonnegative"
+DETAIL:  Failing row contains (4, 2, 1, 2026-11-10, registered, -100.00, null).
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  chk_enrollment_paid_nonnegative
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:103: ERROR:  23514: new row for relation "enrollment" violates check constraint "chk_enrollment_rating_range"
+DETAIL:  Failing row contains (5, 2, 1, 2026-11-10, completed, 1500.00, 6).
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  chk_enrollment_rating_range
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:111: ERROR:  23503: insert or update on table "workshop" violates foreign key constraint "fk_workshop_instructor"
+DETAIL:  Key (instructor_id)=(999) is not present in table "instructor".
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  fk_workshop_instructor
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:115: ERROR:  23503: insert or update on table "workshop" violates foreign key constraint "fk_workshop_room"
+DETAIL:  Key (room_id)=(999) is not present in table "room".
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  fk_workshop_room
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:119: ERROR:  23503: insert or update on table "enrollment" violates foreign key constraint "fk_enrollment_student"
+DETAIL:  Key (student_id)=(999) is not present in table "student".
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  fk_enrollment_student
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:123: ERROR:  23503: insert or update on table "enrollment" violates foreign key constraint "fk_enrollment_workshop"
+DETAIL:  Key (workshop_id)=(999) is not present in table "workshop".
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  fk_enrollment_workshop
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:126: ERROR:  23001: update or delete on table "instructor" violates RESTRICT setting of foreign key constraint "fk_workshop_instructor" on table "workshop"
+DETAIL:  Key (instructor_id)=(1) is referenced from table "workshop".
+SCHEMA NAME:  public
+TABLE NAME:  workshop
+CONSTRAINT NAME:  fk_workshop_instructor
+LOCATION:  ri_ReportViolation, ri_triggers.c:2797
+psql:week-05/violations.sql:129: ERROR:  23503: update or delete on table "workshop" violates foreign key constraint "fk_enrollment_workshop" on table "enrollment"
+DETAIL:  Key (workshop_id)=(1) is still referenced from table "enrollment".
+SCHEMA NAME:  public
+TABLE NAME:  enrollment
+CONSTRAINT NAME:  fk_enrollment_workshop
+LOCATION:  ri_ReportViolation, ri_triggers.c:2811
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
