@@ -1,0 +1,147 @@
+TRUNCATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 3
+INSERT 0 2
+INSERT 0 1
+psql:week-05/violations.sql:30: ERROR:  23502: null value in column "full_name" of relation "pet_owner" violates not-null constraint
+DETAIL:  Failing row contains (2, null, 05330001122, eksik@mail.com, Besiktas, 2026-11-10).
+SCHEMA NAME:  public
+TABLE NAME:  pet_owner
+COLUMN NAME:  full_name
+LOCATION:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:34: ERROR:  23502: null value in column "pet_name" of relation "pet" violates not-null constraint
+DETAIL:  Failing row contains (4, 1, 1, null, cat, 2024, 3.10).
+SCHEMA NAME:  public
+TABLE NAME:  pet
+COLUMN NAME:  pet_name
+LOCATION:  ReportNotNullViolationError, execMain.c:2219
+psql:week-05/violations.sql:40: ERROR:  23505: duplicate key value violates unique constraint "uq_pet_owner_email"
+DETAIL:  Key (email)=(deniz.karaca@mail.com) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  pet_owner
+CONSTRAINT NAME:  uq_pet_owner_email
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:44: ERROR:  23505: duplicate key value violates unique constraint "uq_veterinarian_license"
+DETAIL:  Key (license_no)=(VET-3401) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  veterinarian
+CONSTRAINT NAME:  uq_veterinarian_license
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:48: ERROR:  23505: duplicate key value violates unique constraint "uq_treatment_code"
+DETAIL:  Key (treatment_code)=(VAC-RAB) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  treatment
+CONSTRAINT NAME:  uq_treatment_code
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:52: ERROR:  23505: duplicate key value violates unique constraint "uq_pet_treatment_pet_treatment"
+DETAIL:  Key (pet_id, treatment_id)=(1, 1) already exists.
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  uq_pet_treatment_pet_treatment
+LOCATION:  _bt_check_unique, nbtinsert.c:673
+psql:week-05/violations.sql:58: ERROR:  23514: new row for relation "veterinarian" violates check constraint "chk_vet_fee_positive"
+DETAIL:  Failing row contains (3, Dr. Sifir Ucret, VET-3499, dentistry, 0.00, active).
+SCHEMA NAME:  public
+TABLE NAME:  veterinarian
+CONSTRAINT NAME:  chk_vet_fee_positive
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:62: ERROR:  23514: new row for relation "veterinarian" violates check constraint "chk_vet_status"
+DETAIL:  Failing row contains (4, Dr. Gecersiz Durum, VET-3500, dentistry, 850.00, retired).
+SCHEMA NAME:  public
+TABLE NAME:  veterinarian
+CONSTRAINT NAME:  chk_vet_status
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:66: ERROR:  23514: new row for relation "pet" violates check constraint "chk_pet_species"
+DETAIL:  Failing row contains (5, 1, 1, Yesil, iguana, 2023, 1.80).
+SCHEMA NAME:  public
+TABLE NAME:  pet
+CONSTRAINT NAME:  chk_pet_species
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:70: ERROR:  23514: new row for relation "pet" violates check constraint "chk_pet_weight_range"
+DETAIL:  Failing row contains (6, 1, 1, Eksi Kilo, cat, 2023, -2.00).
+SCHEMA NAME:  public
+TABLE NAME:  pet
+CONSTRAINT NAME:  chk_pet_weight_range
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:74: ERROR:  23514: new row for relation "treatment" violates check constraint "chk_treatment_type"
+DETAIL:  Failing row contains (4, GRM-01, Tiras ve Bakim, grooming, 1.00, 40.00, 400.00).
+SCHEMA NAME:  public
+TABLE NAME:  treatment
+CONSTRAINT NAME:  chk_treatment_type
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:78: ERROR:  23514: new row for relation "treatment" violates check constraint "chk_treatment_weight_order"
+DETAIL:  Failing row contains (5, PAR-ERR, Ters Kilo Aralikli Damla, parasite, 25.00, 5.00, 450.00).
+SCHEMA NAME:  public
+TABLE NAME:  treatment
+CONSTRAINT NAME:  chk_treatment_weight_order
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:82: ERROR:  23514: new row for relation "treatment" violates check constraint "chk_treatment_cost_nonnegative"
+DETAIL:  Failing row contains (6, PAR-NEG, Negatif Fiyatli Islem, parasite, 1.00, 20.00, -150.00).
+SCHEMA NAME:  public
+TABLE NAME:  treatment
+CONSTRAINT NAME:  chk_treatment_cost_nonnegative
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:86: ERROR:  23514: new row for relation "pet_treatment" violates check constraint "chk_pet_treatment_dates"
+DETAIL:  Failing row contains (3, 2, 1, 1, 2026-05-20, 2026-05-10, 650.00, null).
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  chk_pet_treatment_dates
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:90: ERROR:  23514: new row for relation "pet_treatment" violates check constraint "chk_pet_treatment_charged_nonnegative"
+DETAIL:  Failing row contains (4, 2, 1, 1, 2026-05-20, null, -50.00, null).
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  chk_pet_treatment_charged_nonnegative
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:94: ERROR:  23514: new row for relation "pet_treatment" violates check constraint "chk_pet_treatment_score_range"
+DETAIL:  Failing row contains (5, 2, 1, 1, 2026-05-20, null, 650.00, 15).
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  chk_pet_treatment_score_range
+LOCATION:  ExecConstraints, execMain.c:2081
+psql:week-05/violations.sql:100: ERROR:  23503: insert or update on table "pet" violates foreign key constraint "fk_pet_owner"
+DETAIL:  Key (owner_id)=(999) is not present in table "pet_owner".
+SCHEMA NAME:  public
+TABLE NAME:  pet
+CONSTRAINT NAME:  fk_pet_owner
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:104: ERROR:  23503: insert or update on table "pet" violates foreign key constraint "fk_pet_primary_vet"
+DETAIL:  Key (primary_vet_id)=(999) is not present in table "veterinarian".
+SCHEMA NAME:  public
+TABLE NAME:  pet
+CONSTRAINT NAME:  fk_pet_primary_vet
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:108: ERROR:  23503: insert or update on table "pet_treatment" violates foreign key constraint "fk_pet_treatment_pet"
+DETAIL:  Key (pet_id)=(999) is not present in table "pet".
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  fk_pet_treatment_pet
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:112: ERROR:  23503: insert or update on table "pet_treatment" violates foreign key constraint "fk_pet_treatment_treatment"
+DETAIL:  Key (treatment_id)=(999) is not present in table "treatment".
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  fk_pet_treatment_treatment
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:116: ERROR:  23503: insert or update on table "pet_treatment" violates foreign key constraint "fk_pet_treatment_vet"
+DETAIL:  Key (vet_id)=(999) is not present in table "veterinarian".
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  fk_pet_treatment_vet
+LOCATION:  ri_ReportViolation, ri_triggers.c:2783
+psql:week-05/violations.sql:119: ERROR:  23001: update or delete on table "treatment" violates RESTRICT setting of foreign key constraint "fk_pet_treatment_treatment" on table "pet_treatment"
+DETAIL:  Key (treatment_id)=(1) is referenced from table "pet_treatment".
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  fk_pet_treatment_treatment
+LOCATION:  ri_ReportViolation, ri_triggers.c:2797
+psql:week-05/violations.sql:122: ERROR:  23503: update or delete on table "veterinarian" violates foreign key constraint "fk_pet_treatment_vet" on table "pet_treatment"
+DETAIL:  Key (vet_id)=(1) is still referenced from table "pet_treatment".
+SCHEMA NAME:  public
+TABLE NAME:  pet_treatment
+CONSTRAINT NAME:  fk_pet_treatment_vet
+LOCATION:  ri_ReportViolation, ri_triggers.c:2811
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
