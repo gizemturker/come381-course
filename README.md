@@ -26,7 +26,7 @@ Bu repo dersin ortak kaynak reposu: ders amacı, haftalık konular, kaynak kitap
 | 3 | [Genişletilmiş ER (EER)](weeks/week-03/README.md) | Senaryo onayı | Yayında |
 | 4 | [ER/EER'den ilişkisel şemaya](weeks/week-04/README.md) | Konusu Ödev 1'de, teslimi Hafta 5'te | Yayında |
 | 5 | [İlişkisel model, constraint'ler, ilişkisel cebir](weeks/week-05/README.md) | [Ödev 1](weeks/week-05/odev-1.md) ve [Ödev 2](weeks/week-05/odev-2.md), son teslim 25 Ekim | Yayında |
-| 6 | [SQL ile soru sormak](weeks/week-06/README.md) | Ödev 3: SQL sorgu seti ve kısa sınav | Yakında |
+| 6 | [SQL ile soru sormak](weeks/week-06/README.md) | [Ödev 3](weeks/week-06/odev-3.md): Kampüs Kafe'ye SQL ile soru sormak, son teslim 25-26 Kasım | Yakında |
 | 7 | [Fonksiyonel bağımlılık ve normalleştirme](weeks/week-07/README.md) | Vize tasarım dosyası | Yakında |
 | 8 | [Vize savunmaları, gelişmiş SQL ve indeks](weeks/week-08/README.md) | Vize savunması, Ödev 4: Capstone önerisi | Yakında |
 | 9 | [Transaction: ACID, schedule ve serializability](weeks/week-09/README.md) | | Yakında |

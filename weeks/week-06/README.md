@@ -44,4 +44,4 @@ SQL bölümleri (Elmasri & Navathe veya Silberschatz).
 
 ## Ödev
 
-Ödev 3: SQL sorgu seti ve GitHub üzerinden kısa sınav. Yönergesi bu klasöre eklenecek.
+Ödev 3: Kampüs Kafe'ye SQL ile soru sormak. Yönergesi: [odev-3.md](odev-3.md). Hazır veri: [kafe.sql](kafe.sql). Rapor şablonu: [RAPOR-SABLONU.md](../../RAPOR-SABLONU.md). Son teslim: 25 Kasım Çarşamba (şube 2) ve 26 Kasım Perşembe (şube 3), ders saatinde.
