@@ -1,0 +1,10 @@
+BEKLENEN SONUÇLAR — gerçek psql çıktısı değildir.
+A | 23502 | not_null_violation | customer.full_name boş olamaz
+B | 23503 | foreign_key_violation | instructor_id=999 bulunmuyor
+C | 23505 | unique_violation | customer.email tekrar ediyor
+D | 23514 | check_violation | capacity 1 ile 30 arasında olmalı
+E | 23514 | check_violation | end_date start_date'den önce olamaz
+F | 23505 | unique_violation | aynı (customer_id, workshop_id) tekrar ediyor
+G | 23514 | check_violation | registered_on 2020-01-01 öncesi olamaz
+
+Gerçek hata çıktısı için: psql -d come381_test -f sql/violations.sql > sql/actual_violations_output.txt 2>&1
