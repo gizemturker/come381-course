@@ -46,3 +46,15 @@ HAVING COUNT(*) = (
 **Doğru yaklaşım:** D6 sorgusunda çift `NOT EXISTS` yöntemi kullanıldı. Bu yöntem her Sports etkinliği için üyenin bir kaydı olup olmadığını doğrudan kontrol eder ve kategori dışı kayıtların sayılması gibi `COUNT` tabanlı hatalardan kaçınır.
 
 **Diğer yapay zeka kullanımı:** Ödev 2 boyunca constraint testleri, `ON DELETE` politikaları, seed verisi, ilişkisel cebir ifadeleri ve SQL doğrulamaları hazırlanırken ChatGPT kullanıldı. Üretilen dosyalar PostgreSQL üzerinde çalıştırılarak kontrol edildi.
+
+## Ödev 3
+
+**Araç:** ChatGPT
+
+**Kullanım amacı:** Ödev 3 yönergesinin anlaşılması, altı SQL sorgusunun hazırlanması, NULL deneylerinin yorumlanması ve DML işlemlerinin test edilmesi için kullanıldı.
+
+**Prompt özeti:** "Kampüs Kafe veritabanındaki customer, product, orders ve order_item tabloları için yönergede istenen altı sorguyu, iki NULL deneyini ve iki DML komutunu hazırla. Her işlemi PostgreSQL üzerinde test ederek sonuçları yorumlayalım."
+
+**Kontrol ve değişiklik:** `kafe.sql` dosyasının ilk yüklemesinde Türkçe karakter kodlaması nedeniyle hata oluştu. İstemci kodlaması UTF8 olarak ayarlandıktan sonra veri başarıyla yüklendi. Tablolarda 8 müşteri, 8 ürün, 12 sipariş ve 25 sipariş kalemi bulundu. Altı SELECT sorgusu PostgreSQL üzerinde çalıştırıldı ve sonuçları `sorgular_cikti.txt` dosyasına kaydedildi. NULL deneylerinde COUNT(*) 8, COUNT(phone) 5; AVG(age) 20,83, SUM(age) / COUNT(*) ise 15 sonucunu verdi. DML deneyinde sıcak içeceklerin fiyatları işlem içerisinde geçici olarak 5 TL artırıldı. Var olmayan 999 numaralı ürünün eklenmesi foreign key hatası (23503) oluşturdu. ROLLBACK komutuyla bütün değişiklikler geri alındı ve fiyatların başlangıç değerlerinde kaldığı doğrulandı.
+
+**Sonuç:** Yapay zekâ çıktıları doğrudan kabul edilmedi; sorgular ve işlemler PostgreSQL üzerinde çalıştırılarak sonuçları kontrol edildi.
