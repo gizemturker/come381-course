@@ -1,0 +1,82 @@
+Kampüs Kafe - Beklenen sorgu sonuçları
+
+Q1
+name | price
+Club Sandviç | 90
+Cheesecake | 85
+Tost | 70
+Latte | 60
+(4 satır)
+
+Q2
+full_name
+Ayşe Demir
+Elif Yıldız
+Emre Şahin
+Mehmet Kaya
+(4 satır)
+
+Q3
+order_id | order_date | full_name
+1 | 2026-11-02 | Ayşe Demir
+2 | 2026-11-02 | Mehmet Kaya
+3 | 2026-11-03 | Ayşe Demir
+4 | 2026-11-04 | Elif Yıldız
+5 | 2026-11-05 | Can Arslan
+6 | 2026-11-05 | Zeynep Aksoy
+7 | 2026-11-09 | Ayşe Demir
+8 | 2026-11-10 | Burak Çelik
+9 | 2026-11-11 | Mehmet Kaya
+10 | 2026-11-12 | Selin Öztürk
+11 | 2026-11-16 | Elif Yıldız
+12 | 2026-11-17 | Zeynep Aksoy
+(12 satır)
+
+Q4
+order_id | name | quantity
+1 | Latte | 1
+1 | Cheesecake | 1
+2 | Çay | 2
+2 | Tost | 1
+3 | Türk Kahvesi | 1
+3 | Buzlu Çay | 1
+4 | Limonata | 1
+4 | Club Sandviç | 1
+5 | Çay | 1
+5 | Cheesecake | 2
+6 | Latte | 2
+6 | Tost | 1
+7 | Limonata | 2
+7 | Club Sandviç | 1
+8 | Türk Kahvesi | 1
+8 | Cheesecake | 1
+9 | Latte | 1
+9 | Buzlu Çay | 2
+10 | Çay | 1
+10 | Limonata | 1
+10 | Tost | 1
+11 | Türk Kahvesi | 2
+11 | Cheesecake | 1
+12 | Latte | 1
+12 | Club Sandviç | 1
+(25 satır)
+
+Q5
+full_name | toplam_siparis
+Ayşe Demir | 3
+Mehmet Kaya | 2
+Elif Yıldız | 2
+Can Arslan | 1
+Zeynep Aksoy | 2
+Burak Çelik | 1
+Selin Öztürk | 1
+Emre Şahin | 0
+(8 satır)
+
+Q6
+category | fiyat_ortalamasi
+Sandviç | 80
+Soğuk İçecek | 35
+Sıcak İçecek | 38.333333
+Tatlı | 85
+(4 satır)

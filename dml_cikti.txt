@@ -1,0 +1,37 @@
+Kampüs Kafe - Beklenen DML sonuçları
+
+BEGIN;
+
+İşlem öncesi fiyatlar:
+name | price
+Çay | 20
+Türk Kahvesi | 35
+Latte | 60
+(3 satır)
+
+UPDATE 3
+
+5 TL artış sonrası fiyatlar:
+name | price
+Çay | 25
+Türk Kahvesi | 40
+Latte | 65
+(3 satır)
+
+INSERT INTO order_item (order_id, product_id, quantity)
+VALUES (1, 999, 1);
+
+Beklenen hata kodu: 23503
+foreign_key_violation
+
+999 numaralı ürün bulunmadığı için
+ekleme işlemi başarısız olur.
+
+ROLLBACK;
+
+Geri alma sonrası fiyatlar:
+name | price
+Çay | 20
+Türk Kahvesi | 35
+Latte | 60
+(3 satır)
