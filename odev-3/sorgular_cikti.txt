@@ -1,0 +1,150 @@
+COME 381 - DATABASE SYSTEMS
+ÖDEV 3 - SQL SORGULARI VE ÇIKTILARI
+Kampüs Kafe
+
+Q1 - Fiyatý 50 TL'den yüksek ürünleri pahalýdan ucuza sýrala.
+Ne iþe yarar: 50 TL üzerindeki ürünleri en pahalýdan baþlayarak görmeyi saðlar.
+
+SELECT name, price
+FROM product
+WHERE price > 50
+ORDER BY price DESC;
+
+     name     | price
+--------------+-------
+ Club Sandviç | 90.00
+ Cheesecake   | 85.00
+ Tost         | 70.00
+ Latte        | 60.00
+(4 satýr)
+
+
+Q2 - 'YBS' bölümündeki müþterilerin adlarýný alfabetik sýrala.
+Ne iþe yarar: YBS bölümündeki müþterileri isimlerine göre alfabetik olarak listeler.
+
+SELECT full_name
+FROM customer
+WHERE department = 'YBS'
+ORDER BY full_name ASC;
+
+  full_name
+-------------
+ Ayþe Demir
+ Elif Yýldýz
+ Emre Þahin
+ Mehmet Kaya
+(4 satýr)
+
+
+Q3 - Her sipariþin numarasýný, tarihini ve müþterinin adýný listele.
+Ne iþe yarar: Sipariþleri hangi müþterinin verdiðini görmemizi saðlar.
+
+SELECT
+    o.order_id,
+    o.order_date,
+    c.full_name
+FROM orders o
+INNER JOIN customer c
+    ON o.customer_id = c.customer_id
+ORDER BY o.order_id;
+
+ order_id | order_date |  full_name
+----------+------------+--------------
+        1 | 2026-11-02 | Ayþe Demir
+        2 | 2026-11-02 | Mehmet Kaya
+        3 | 2026-11-03 | Ayþe Demir
+        4 | 2026-11-04 | Elif Yýldýz
+        5 | 2026-11-05 | Can Arslan
+        6 | 2026-11-05 | Zeynep Aksoy
+        7 | 2026-11-09 | Ayþe Demir
+        8 | 2026-11-10 | Burak Çelik
+        9 | 2026-11-11 | Mehmet Kaya
+       10 | 2026-11-12 | Selin Öztürk
+       11 | 2026-11-16 | Elif Yýldýz
+       12 | 2026-11-17 | Zeynep Aksoy
+(12 satýr)
+
+
+Q4 - Her sipariþ kaleminin ürün adýný ve adedini listele.
+Ne iþe yarar: Sipariþlerde hangi ürünlerden kaç adet bulunduðunu gösterir.
+
+SELECT
+    p.name,
+    oi.quantity
+FROM order_item oi
+INNER JOIN product p
+    ON oi.product_id = p.product_id
+ORDER BY oi.order_id, oi.product_id;
+
+     name     | quantity
+--------------+----------
+ Latte        |        1
+ Cheesecake   |        1
+ Çay          |        2
+ Tost         |        1
+ Türk Kahvesi |        1
+ Buzlu Çay    |        1
+ Limonata     |        1
+ Club Sandviç |        1
+ Çay          |        1
+ Cheesecake   |        2
+ Latte        |        2
+ Tost         |        1
+ Limonata     |        2
+ Club Sandviç |        1
+ Türk Kahvesi |        1
+ Cheesecake   |        1
+ Latte        |        1
+ Buzlu Çay    |        2
+ Çay          |        1
+ Limonata     |        1
+ Tost         |        1
+ Türk Kahvesi |        2
+ Cheesecake   |        1
+ Latte        |        1
+ Club Sandviç |        1
+(25 satýr)
+
+
+Q5 - Her müþterinin kaç sipariþ verdiðini müþteri adýyla listele.
+Ne iþe yarar: Her müþterinin sipariþ sayýsýný gösterir ve hiç sipariþ vermeyenleri de listeler.
+
+SELECT
+    c.full_name,
+    COUNT(o.order_id) AS order_count
+FROM customer c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.full_name
+ORDER BY c.full_name ASC;
+
+  full_name   | order_count
+--------------+-------------
+ Ayþe Demir   |           3
+ Burak Çelik  |           1
+ Can Arslan   |           1
+ Elif Yýldýz  |           2
+ Emre Þahin   |           0
+ Mehmet Kaya  |           2
+ Selin Öztürk |           1
+ Zeynep Aksoy |           2
+(8 satýr)
+
+
+Q6 - Her ürün kategorisinin ortalama fiyatýný bul.
+Ne iþe yarar: Kategorilere göre ortalama ürün fiyatlarýný karþýlaþtýrmayý saðlar.
+
+SELECT
+    category,
+    AVG(price) AS average_price
+FROM product
+GROUP BY category
+ORDER BY category ASC;
+
+   category   |    average_price
+--------------+---------------------
+ Sandviç      | 80.0000000000000000
+ Sýcak Ýçecek | 38.3333333333333333
+ Soðuk Ýçecek | 35.0000000000000000
+ Tatlý        | 85.0000000000000000
+(4 satýr)
