@@ -1,0 +1,117 @@
+-- Q1: Fiyatı 50 TL'den yüksek ürünleri pahalıdan ucuza sırala.
+-- Ne işe yarar: Menüdeki üst fiyat grubunda yer alan ürünleri belirleyip fiyat-performans veya indirim planlaması yapmaya yarar.
+SELECT name, price
+FROM product
+WHERE price > 50
+ORDER BY price DESC;
+     name     | price 
+--------------+-------
+ Club Sandviç | 90.00
+ Cheesecake   | 85.00
+ Tost         | 70.00
+ Latte        | 60.00
+(4 rows)
+
+-- Q2: 'YBS' bölümündeki müşterilerin adlarını alfabetik sırala.
+-- Ne işe yarar: Yönetim Bilişim Sistemleri bölümünde okuyan kafe müşterilerinin isim listesini düzenli şekilde görmeye yarar.
+SELECT full_name
+FROM customer
+WHERE department = 'YBS'
+ORDER BY full_name;
+  full_name  
+-------------
+ Ayşe Demir
+ Elif Yıldız
+ Emre Şahin
+ Mehmet Kaya
+(4 rows)
+
+-- Q3: Her siparişin numarasını, tarihini ve müşterinin adını listele.
+-- Ne işe yarar: Sipariş kayıtlarını müşteri isimleriyle eşleştirerek hangi siparişi kimin hangi günde verdiğini raporlamaya yarar.
+SELECT o.order_id, o.order_date, c.full_name
+FROM orders o
+INNER JOIN customer c ON o.customer_id = c.customer_id
+ORDER BY o.order_id;
+ order_id | order_date |  full_name   
+----------+------------+--------------
+        1 | 2026-11-02 | Ayşe Demir
+        2 | 2026-11-02 | Mehmet Kaya
+        3 | 2026-11-03 | Ayşe Demir
+        4 | 2026-11-04 | Elif Yıldız
+        5 | 2026-11-05 | Can Arslan
+        6 | 2026-11-05 | Zeynep Aksoy
+        7 | 2026-11-09 | Ayşe Demir
+        8 | 2026-11-10 | Burak Çelik
+        9 | 2026-11-11 | Mehmet Kaya
+       10 | 2026-11-12 | Selin Öztürk
+       11 | 2026-11-16 | Elif Yıldız
+       12 | 2026-11-17 | Zeynep Aksoy
+(12 rows)
+
+-- Q4: Her sipariş kaleminin ürün adını ve adedini listele.
+-- Ne işe yarar: Satılan ürünlerin sipariş kalemlerindeki dağılımını ve miktarlarını görerek stok takibi yapmaya yarar.
+SELECT p.name, oi.quantity
+FROM order_item oi
+INNER JOIN product p ON oi.product_id = p.product_id
+ORDER BY oi.order_id, p.product_id;
+     name     | quantity 
+--------------+----------
+ Latte        |        1
+ Cheesecake   |        1
+ Çay          |        2
+ Tost         |        1
+ Türk Kahvesi |        1
+ Buzlu Çay    |        1
+ Limonata     |        1
+ Club Sandviç |        1
+ Çay          |        1
+ Cheesecake   |        2
+ Latte        |        2
+ Tost         |        1
+ Limonata     |        2
+ Club Sandviç |        1
+ Türk Kahvesi |        1
+ Cheesecake   |        1
+ Latte        |        1
+ Buzlu Çay    |        2
+ Çay          |        1
+ Limonata     |        1
+ Tost         |        1
+ Türk Kahvesi |        2
+ Cheesecake   |        1
+ Latte        |        1
+ Club Sandviç |        1
+(25 rows)
+
+-- Q5: Her müşterinin kaç sipariş verdiğini müşteri adıyla listele.
+-- Ne işe yarar: Sipariş veren müşterilerin kafeyi hangi sıklıkla kullandığını karşılaştırarak müşteri bağlılığını ölçmeye yarar.
+SELECT c.full_name, COUNT(*) AS siparis_sayisi
+FROM orders o
+INNER JOIN customer c ON o.customer_id = c.customer_id
+GROUP BY c.customer_id, c.full_name
+ORDER BY siparis_sayisi DESC, c.full_name;
+  full_name   | siparis_sayisi 
+--------------+----------------
+ Ayşe Demir   |              3
+ Elif Yıldız  |              2
+ Mehmet Kaya  |              2
+ Zeynep Aksoy |              2
+ Burak Çelik  |              1
+ Can Arslan   |              1
+ Selin Öztürk |              1
+(7 rows)
+
+-- Q6: Her ürün kategorisinin ortalama fiyatını bul.
+-- Ne işe yarar: Kategorilerin ortalama satış fiyatlarını hesaplayarak hangi ürün grubunun daha yüksek fiyatlı olduğunu analiz etmeye yarar.
+SELECT category, AVG(price) AS ortalama_fiyat
+FROM product
+GROUP BY category
+ORDER BY ortalama_fiyat DESC;
+   category   |   ortalama_fiyat    
+--------------+---------------------
+ Tatlı        | 85.0000000000000000
+ Sandviç      | 80.0000000000000000
+ Sıcak İçecek | 38.3333333333333333
+ Soğuk İçecek | 35.0000000000000000
+(4 rows)
+
